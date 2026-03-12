@@ -1,3 +1,11 @@
+eureka:
+  client:
+    serviceUrl:
+      defaultZone: http://eureka:password@localhost:8761/eureka   # было discovery-server
+  instance:
+    preferIpAddress: true
+    ip-address: 127.0.0.1   # опционально, для явного указания IP
+
 spring:
   cloud:
     gateway:
@@ -14,8 +22,3 @@ spring:
           uri: lb://NOTIFICATION-SERVICE
           predicates:
             - Path=/api/notifications/**
-
-eureka:
-  client:
-    serviceUrl:
-      defaultZone: http://eureka:password@discovery-server:8761/eureka
