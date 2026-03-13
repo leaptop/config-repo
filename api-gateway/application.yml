@@ -1,7 +1,7 @@
 eureka:
   client:
     serviceUrl:
-      defaultZone: http://eureka:password@localhost:8761/eureka   # было discovery-server
+      defaultZone: http://discovery-server:8761/eureka
   instance:
     preferIpAddress: true
     ip-address: 127.0.0.1   # опционально, для явного указания IP
