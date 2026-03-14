@@ -19,7 +19,8 @@ eureka:
       defaultZone: http://discovery-server:8761/eureka
   instance:
     preferIpAddress: true
-    ip-address: 127.0.0.1   # добавить эту строку
+    # ip-address вручную не задаём.
+    # Docker сам даст контейнеру корректный адрес в своей сети.
 
 resilience4j.circuitbreaker:
   instances:

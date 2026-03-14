@@ -4,7 +4,9 @@ eureka:
       defaultZone: http://discovery-server:8761/eureka
   instance:
     preferIpAddress: true
-    ip-address: 127.0.0.1   # опционально, для явного указания IP
+    # Не задаём ip-address вручную.
+    # Если поставить 127.0.0.1, другие контейнеры будут пытаться ходить в себя,
+    # а не в api-gateway.
 
 spring:
   cloud:
